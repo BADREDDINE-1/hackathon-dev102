@@ -8,7 +8,6 @@ Le fichier db.php est utilisé pour établir la connexion entre l'application PH
 
 hackathon.sql – Structure de la Base de Données
 Le fichier hackathon.sql contient la structure de la base de données utilisée pour stocker les utilisateurs dans un tableau "users".
-![image](img/imgdev1.png)
 
 ``CREATE DATABASE IF NOT EXISTS project;
 
@@ -17,19 +16,22 @@ USE project;
 CREATE TABLE IF NOT EXISTS users ( id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(50) NOT NULL UNIQUE, email VARCHAR(100) NOT NULL UNIQUE, password VARCHAR(255) NOT NULL, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP );``
 
 register.php – Interface d'Enregistrement : Conception Intuitive et Sécurisée
-Logo
+![image](img/imgdev4.png)
 
 Ce fichier permet à un nouvel utilisateur de s'inscrire via un formulaire comprenant : nom d'utilisateur, email, mot de passe et confirmation. Les données sont validées côté serveur et client.
 
-register.php – Validation et Sécurité : Prévention des Risques dès l'Inscription Image description
+register.php – Validation et Sécurité : Prévention des Risques dès l'Inscription
+![image](img/img.png)
 
 En cas d'erreurs (format d’email invalide, mot de passe faible, confirmation erronée…), des messages clairs s’affichent pour guider l’utilisateur.
 
-login.php – Page de Connexion : Accès Sécurisé et Contrôle des Sessions Image description
+login.php – Page de Connexion : Accès Sécurisé et Contrôle des Sessions 
+![image](img/imgdev1.png)
 
 Ce fichier vérifie les informations entrées par l’utilisateur en les comparant à celles de la base de données. En cas de correspondance, une session est créée. Sinon, un message d’erreur discret est affiché.
 
-dashboard.php – Accès Sécurisé au Tableau de Bord : Protection des Données Utilisateur Image description
+dashboard.php – Accès Sécurisé au Tableau de Bord : Protection des Données Utilisateur
+![image](img/imgdev3.png)
 
 Une fois connecté, l'utilisateur est redirigé vers son tableau de bord personnel. Le fichier dashboard.php vérifie si une session valide existe, empêchant tout accès non autorisé.
 
